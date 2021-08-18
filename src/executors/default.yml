@@ -3,7 +3,7 @@ description: >
 docker:
   - image: 'cimg/node:<<parameters.node>>'
     auth:
-      username: hudcode
+      username: $DOCKERHUB_USERNAME
       password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
 parameters:
   node:
