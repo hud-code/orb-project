@@ -2,6 +2,9 @@ description: >
   This is a sample executor using Docker and Node.
 docker:
   - image: 'cimg/node:<<parameters.node>>'
+    auth:
+      username: hudcode
+      password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
 parameters:
   node:
     default: '16.6.2'
